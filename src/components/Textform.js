@@ -51,7 +51,7 @@ return(
     </div>
     <div className="container my-3" style={{color:props.mode==='light'?'black':'white'}}>
       <h2>Your text summary is here</h2>
-      <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+      <p>{text.split(" ").filter((element)=>{return element.length!===0}).length} words and {text.length} characters</p>
       <p>In {0.008 * text.split(" ").length} minutes you can read this.</p>
       <h2>Preview</h2>
       <p>{text.length>0?text:"Enter something to preview it here"}</p>
