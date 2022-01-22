@@ -41,17 +41,17 @@ return(
 
   <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows="8" style={{backgroundColor:props.mode==='light'?'white':'grey' ,color:props.mode==='light'?'black':'white'} }></textarea>
 </div>
-<button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert To Uppercase</button>
-<button className="btn btn-primary mx-2" onClick={handlelowClick}>Convert To Lowercase </button>
-<button className="btn btn-primary mx-2" onClick={handleCopy}>Copy all</button>
-<button className="btn btn-primary mx-2" onClick={handleExtraspaces}>Remove extra spaces </button>
-<button className="btn btn-primary mx-2" onClick={handleclearclick}>Click to clear </button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert To Uppercase</button>
+<button className="btn btn-primary mx-1 my-1" onClick={handlelowClick}>Convert To Lowercase </button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy all</button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleExtraspaces}>Remove extra spaces </button>
+<button className="btn btn-primary mx-1 my-1" onClick={handleclearclick}>Click to clear </button>
 {/* <button className="btn btn-primary mx-3" onClick={handlefirstletClick}>Convert only first letter to uppercase</button> */}
 {/* <button className="btn btn-primary mx-1" onClick={handlereplaceClick}>  Text replace  </button> */}
     </div>
     <div className="container my-3" style={{color:props.mode==='light'?'black':'white'}}>
       <h2>Your text summary is here</h2>
-      <p>{text.split(" ").length} words and {text.length} characters</p>
+      <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
       <p>In {0.008 * text.split(" ").length} minutes you can read this.</p>
       <h2>Preview</h2>
       <p>{text.length>0?text:"Enter something to preview it here"}</p>
